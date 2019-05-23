@@ -6,7 +6,7 @@ import { Request, Response, NextFunction } from "express"
 
 const router = express.Router()
 
-router.get("/all", async (req: Request, res: Response, next: NextFunction) => {
+router.get("/", async (req: Request, res: Response, next: NextFunction) => {
   try {
     const drugs:Array<DrugDocument> = await Drug.find({})
     console.log("result_get_drugs :", drugs)
